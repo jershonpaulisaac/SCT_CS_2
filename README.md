@@ -27,22 +27,18 @@ It is designed for **learning basic image-based cryptography** while practicing 
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/image-encryption-tool.git
-cd image-encryption-tool
-Install dependencies:
-
-bash
-Copy
-Edit
+https://github.com/jershonpaulisaac/SCT_CS_2.git
+```
+2.Install dependencies:
+```bash
 pip install pillow numpy
-Usage
+```
+3.Usage
 Run the tool using the command line:
-
-bash
-Copy
-Edit
+```bash
 python image_tool.py -i <input_file> -o <output_file> -m <mode> --op <operation> [--key <key>]
-Arguments:
+```
+4.Arguments:
 -i, --input : Input image file (required)
 
 -o, --output : Output image file (required)
@@ -55,48 +51,32 @@ Arguments:
 
 Examples
 1. XOR Encryption:
-
-bash
-Copy
-Edit
+```
 python image_tool.py -i input.png -o encrypted.png -m encrypt --op xor --key 123
-2. XOR Decryption:
-
-bash
-Copy
-Edit
+```
+3. XOR Decryption:
+```
 python image_tool.py -i encrypted.png -o decrypted.png -m decrypt --op xor --key 123
+```
 3. Add Encryption:
-
-bash
-Copy
-Edit
+```
 python image_tool.py -i input.png -o encrypted.png -m encrypt --op add --key 50
+```
 4. Flip Image Vertically:
-
-bash
-Copy
-Edit
+```
 python image_tool.py -i input.png -o flipped.png -m encrypt --op flip
-How It Works
+```
+## How It Works
 Loading the Image:
 The tool uses the Python Imaging Library (PIL) to open the image and convert it into a NumPy array for pixel manipulation.
 
 Applying Operations:
 
 XOR: Performs bitwise XOR between each pixel and the key.
-
 Add/Subtract: Modifies each pixel value using the key with wrapping (0–255) using modulo arithmetic.
-
 Flip: Vertically flips the image using NumPy.
-
 Saving the Output:
 The modified array is converted back into an image and saved as the output file.
-
-Contribution
-Contributions are welcome! You can:
-
-Add more encryption techniques
 
 ## License
 
